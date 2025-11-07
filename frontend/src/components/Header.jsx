@@ -73,11 +73,11 @@ export default function Header() {
                   : 'text-gray-700 hover:text-yellow-500'
               }
             >
-              Events
+              Community
             </NavLink>
 
             <NavLink
-              to="/events"
+              to="/about"
               className={({ isActive }) =>
                 isActive
                   ? 'text-yellow-500 font-semibold'
@@ -107,6 +107,7 @@ export default function Header() {
               <option value="team">Our Team</option>
               <option value="careers">Careers</option>
               <option value="contact">Contact Us</option>
+              <option value="events">Events </option>
             </select>
           </nav>
 
