@@ -14,7 +14,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 container mx-auto px-4 py-8">
+      <main className="flex-1 container mx-auto  ">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/community" element={<Community />} />
