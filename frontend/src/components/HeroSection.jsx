@@ -3,7 +3,7 @@ import rathayatra from '../assets/rathayatra.png'
 import chakra from '../assets/chakra.png'
 import community from '../assets/community.png'
 import calender from '../assets/calender.jpg'
-import search from '../assets/search.png'
+ 
 const HeroSection = () => {
   return (
     <section
