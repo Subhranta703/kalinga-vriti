@@ -9,6 +9,7 @@ import Events from './pages/Events';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Founder from './pages/Founder';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/founder" element={<Founder />} />
         </Routes>
       </main>
       <Footer />

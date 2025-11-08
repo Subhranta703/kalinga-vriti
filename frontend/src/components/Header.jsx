@@ -88,7 +88,7 @@ export default function Header() {
             </NavLink>
 
             <NavLink
-              to="/blog"
+              to="/founder"
               className={({ isActive }) =>
                 isActive
                   ? 'text-yellow-500 font-semibold'
