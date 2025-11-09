@@ -60,17 +60,17 @@ export default function OdishaTechEcosystem() {
   return (
     <div className="min-h-screen bg-orange-50">
       {/* 🌟 Hero Section */}
-      <div className="bg-gradient-to-br from-amber-100 to-orange-100 px-6 py-16">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-serif mb-2">
-            <span className="text-gray-800">Stories from Odisha's </span>
-            <span className="text-orange-500">Tech <br/>Ecosystem</span>
+      <div className="bg-gradient-to-br from-amber-100 to-orange-100 px-6 py-36">
+        <div className="max-w-6xl mx-auto ">
+          <h1 className="text-4xl md:text-6xl font-serif mb-2 ">
+            <span className="text-gray-800 font-semibold ">Stories from Odisha's </span>
+            <span className="text-orange-500 font-semibold">Tech <br/>Ecosystem</span>
           </h1>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-500 my-10">
             Real founders. Real challenges. Real solutions.
           </p>
           <div className="flex flex-wrap gap-3">
-            <button className="bg-orange-500 text-white px-5 py-2 rounded text-sm font-medium">
+            <button className="bg-orange-500 text-white px-5 py-3 rounded text-sm font-medium">
               Contribute Your Story
             </button>
             <button className="bg-white text-gray-700 px-5 py-2 rounded text-sm font-medium border border-gray-300">
@@ -81,21 +81,21 @@ export default function OdishaTechEcosystem() {
       </div>
 
       {/* 🧭 Filter Buttons */}
-<div className="max-w-6xl mx-auto px-3 py-4 flex flex-wrap justify-between gap-2">
-        <button className="bg-orange-500 text-white  py-1 rounded-md text-sm flex items-center gap-2 flex-1 justify-center">
+<div className="max-w-6xl mx-auto  py-12 flex flex-wrap justify-between gap-4 ">
+        <button className="bg-orange-500 text-white  py-1 rounded-full text-sm flex items-center gap-2 flex-1 justify-center">
            <img src={rocket} className="py-1  "/>
             Founder Journey
         </button>
-        <button className="bg-gray-200 text-black  py-1 rounded-md text-sm flex items-center gap-2 flex-1 justify-center">
+        <button className="bg-gray-200 text-black  py-3 rounded-full text-sm flex items-center gap- flex-1 justify-center">
            <img src={tech}/> Tech & Innovation
         </button>
-        <button className="bg-gray-200 text-black  py-1 rounded-md text-sm flex items-center gap-2 flex-1 justify-center">
+        <button className="bg-gray-200 text-black  py-3 rounded-full text-sm flex items-center gap-2 flex-1 justify-center">
            <img src={career}/> Career & Growth
         </button>
-        <button className="bg-gray-200 text-black  py-1 rounded-md text-sm flex items-center gap-2 flex-1 justify-center">
+        <button className="bg-gray-200 text-black  py-3 rounded-full text-sm flex items-center gap-2 flex-1 justify-center">
            <img src={eco}/> Ecosystem Updates
         </button>
-        <button className="bg-gray-200 text-black  py-1 rounded-md text-sm flex items-center gap-2 flex-1 justify-center">
+        <button className="bg-gray-200 text-black  py-3 rounded-full text-sm flex items-center gap-2 flex-1 justify-center">
          
    <img src={blackcal}/>
  Event Chronicles
@@ -103,7 +103,7 @@ export default function OdishaTechEcosystem() {
       </div>
 
       {/* 🌟 Featured Story */}
-      <div className="max-w-6xl mx-auto px-6 pb-16 grid md:grid-cols-2 gap-8 items-center">
+      <div className="max-w-full mx-auto px-44 py-16 pb-16 grid md:grid-cols-2 gap-8 items-center bg-gradient-to-br from-amber-100 to-orange-100">
         {/* Left - Image */}
         <img src={human} alt="founder" className="rounded-lg shadow-md w-full" />
 
@@ -116,7 +116,7 @@ export default function OdishaTechEcosystem() {
             <span className="text-gray-600 text-sm">5 min read</span>
           </div>
 
-          <h1 className="font-extrabold text-gray-900 text-3xl mb-3">
+          <h1 className="font-extrabold text-gray-900 text-3xl mb-3 font-serif">
             How I Built a ₹5 Cr Startup from Cuttack Without Moving to Bangalore
           </h1>
 
@@ -141,9 +141,9 @@ export default function OdishaTechEcosystem() {
       </div>
 
       {/* 📰 Blogs + Sidebar */}
-      <div className="max-w-6xl mx-auto px-6 pb-20 grid lg:grid-cols-[2fr_1fr] gap-10">
+      <div className="max-w-full px-44 mx-auto   pb-20 grid lg:grid-cols-[3fr_1fr] gap-10 bg-gradient-to-br from-amber-100 to-orange-100">
         {/* Left - Blog Cards */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 w-full">
           {blogs.map((blog, index) => (
             <div
               key={index}
@@ -154,7 +154,7 @@ export default function OdishaTechEcosystem() {
                 alt={blog.title}
                 className="w-full h-48 object-cover"
               />
-              <div className="p-6">
+              <div className="py-4 px-6 h-56">
                 <div className="flex items-center gap-2 text-sm mb-3">
                   <span
                     className={`px-3 py-1 rounded-full font-medium ${blog.categoryColor}`}
@@ -163,10 +163,10 @@ export default function OdishaTechEcosystem() {
                   </span>
                   <span className="text-gray-500">{blog.readTime}</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 leading-tight">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 leading-tight font-serif">
                   {blog.title}
                 </h3>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed ">
                   {blog.description}
                 </p>
                 <p className="text-sm font-medium text-gray-700">
@@ -180,7 +180,7 @@ export default function OdishaTechEcosystem() {
         {/* Right - Sidebar */}
         <div className="flex flex-col gap-6">
           {/* 📚 Most Read Stories */}
-          <div className="bg-white rounded-xl shadow-sm p-6">
+          <div className="bg-white rounded-xl shadow-sm p-6 h-1/3">
             <h2 className="text-lg font-semibold text-gray-800 mb-4">
               Most Read Stories
             </h2>
@@ -218,11 +218,11 @@ export default function OdishaTechEcosystem() {
           </div>
 
           {/* 📨 Newsletter Signup */}
-          <div className="bg-gradient-to-b from-yellow-100 to-amber-100 rounded-xl shadow-sm p-6">
-            <h2 className="text-lg font-semibold text-gray-800 mb-2">
+          <div className="bg-gradient-to-r from-yellow-500 to-orange-600 rounded-xl shadow-sm p-6">
+            <h2 className="text-lg font-semibold text-white mb-2">
               Newsletter Signup
             </h2>
-            <p className="text-sm text-gray-600 mb-4">
+            <p className="text-sm text-white mb-4">
               Get the Weekly Wrap: Odisha's Tech Digest
             </p>
             <form className="flex flex-col gap-3">
