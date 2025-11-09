@@ -14,18 +14,18 @@ const HeroSection = () => {
 
         {/* Left Section */}
         <div className="w-full md:w-2/3 text-center md:text-left">
-          <h1 className="text-black font-bold text-3xl sm:text-4xl md:text-5xl leading-tight">
+          <h1 className="text-black font-bold text-3xl sm:text-4xl md:text-6xl leading-tight">
             Odisha's Digital <br className="hidden sm:block"/> Temple of Innovation
           </h1>
 
-          <p className="text-gray-700 my-5 text-sm sm:text-base">
+          <p className="text-gray-700 my-8 text-sm sm:text-base md:ml-2">
             Building the largest tech community in Odisha through stories, events,
             <br className="hidden sm:block"/> and connections.
           </p>
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 sm:gap-6">
-            <button className="bg-yellow-500 font-semibold rounded-md px-4 py-3 flex items-center justify-center gap-3 hover:bg-yellow-400 transition">
+            <button className="bg-yellow-500 font-semibold rounded-md px-4 py-3 md:ml-2 flex items-center justify-center gap-3 hover:bg-yellow-400 transition">
               <img src={community} className="h-6" alt="community"/>
               <span className="text-sm sm:text-base">Join Our Community</span>
             </button>
@@ -37,7 +37,7 @@ const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <ul className="flex flex-wrap justify-center md:justify-start gap-4 sm:gap-5 mt-6">
+          <ul className="flex flex-wrap justify-center md:justify-start gap-4 sm:gap-5 mt-8 md:ml-2">
             {[
               { value: "1000+", label: "Tech Professionals" },
               { value: "25+", label: "Blog Posts" },
@@ -56,13 +56,18 @@ const HeroSection = () => {
         </div>
 
         {/* Right Section */}
-        <div className="flex justify-center w-full md:w-1/3">
-          <img
-            src={chakra}
-            alt="chakra"
-            className="w-56 sm:w-72 md:w-80 lg:w-96 p-5 animate-spin-slow"
-          />
-        </div>
+ <div className="flex justify-center w-full md:w-[500px] ">
+  <div
+    className="relative flex items-center justify-center w-[600px] h-[450px] bg-cover bg-center bg-no-repeat"
+    style={{
+      backgroundImage: `url(${chakra})`,
+    }}
+  >
+  </div>
+</div>
+
+
+
       </div>
     </section>
   )
