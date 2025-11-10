@@ -44,12 +44,12 @@ export default function Footer() {
         <div>
           <h3 className="text-yellow-400 font-semibold mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-yellow-400">All Events</a></li>
-            <li><a href="#" className="hover:text-yellow-400">Events</a></li>
-            <li><a href="#" className="hover:text-yellow-400">Community</a></li>
-            <li><a href="#" className="hover:text-yellow-400">About Us</a></li>
-            <li><a href="#" className="hover:text-yellow-400">Blog</a></li>
-            <li><a href="#" className="hover:text-yellow-400">Founders Way</a></li>
+            <li><a href="events" className="hover:text-yellow-400">All Events</a></li>
+            <li><a href="events" className="hover:text-yellow-400">Events</a></li>
+            <li><a href="community" className="hover:text-yellow-400">Community</a></li>
+            <li><a href="about" className="hover:text-yellow-400">About Us</a></li>
+            <li><a href="blog" className="hover:text-yellow-400">Blog</a></li>
+            <li><a href="founder" className="hover:text-yellow-400">Founders Way</a></li>
           </ul>
         </div>
 
@@ -90,7 +90,7 @@ export default function Footer() {
 
       {/* 🔸 Bottom Section */}
       <div className="text-center text-sm text-gray-500 mt-6">
-        © 2024 Kalinga Vritti. All rights reserved.
+        © 2025 Kalinga Vritti. All rights reserved.
       </div>
     </footer>
   );
