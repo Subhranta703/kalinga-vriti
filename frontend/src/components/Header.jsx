@@ -45,7 +45,7 @@ export default function Header() {
             <img
               src={logo}
               alt="Kalinga Vriti Logo"
-              className="absolute left-5 sm:left-6 top-3 h-5 sm:h-6 w-auto object-contain mix-blend-multiply"
+              className="absolute left-4 sm:left-5 top-3 h-5 sm:h-6 w-auto object-contain mix-blend-multiply"
             />
             <h6 className="absolute top-8 left-2 text-[7px] sm:text-[8px] font-medium text-gray-700">
               Kalinga Vriti
