@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import communitybg from "../assets/communitybg.png";
 import wp from "../assets/wp.png";
 import fire from "../assets/fire.png";
 import mail from "../assets/mail.png";
@@ -21,52 +21,61 @@ export default function Community() {
   return (
     <div className="text-gray-800 overflow-hidden">
       {/* HERO SECTION */}
-      <section className="bg-gradient-to-r from-red-950 to-orange-600 flex flex-col justify-center items-center text-center py-20 px-6 space-y-8">
-        {/* Active Members */}
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          className="bg-white rounded-lg flex items-center gap-2 px-4 py-2 shadow"
-        >
-          <img src={fire} alt="Active Members" className="w-6 h-6" />
-          <h1 className="text-gray-800 font-medium">1,000+ Active Members</h1>
-        </motion.button>
+     <section
+  className="relative bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-center py-20 px-6 space-y-8"
+  style={{
+    backgroundImage: `url(${communitybg})`,
+  }}
+>
+        <div className="absolute inset-0 bg-gradient-to-r from-red-950/80 to-orange-600/70"></div>
 
-        {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="px-2"
-        >
-          <h1 className="text-orange-400 text-4xl sm:text-5xl font-bold font-serif my-4">
-            Connect with 1,000+ Tech
-          </h1>
-          <h1 className="text-yellow-400 text-4xl sm:text-5xl font-bold font-serif mb-6">
-            Professionals in Odisha
-          </h1>
-          <p className="font-sans text-sm sm:text-base text-white leading-relaxed">
-            Join a growing community of founders, developers, and innovators <br className="hidden sm:block" />
-            building Odisha's tech future.
-          </p>
-        </motion.div>
-
-        {/* Join Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mt-4">
+        <div className="relative z-10 flex flex-col items-center space-y-8">
+          {/* Active Members */}
           <motion.button
-            whileHover={{ scale: 1.05 }}
-            className="bg-yellow-500 rounded-lg flex items-center gap-2 px-5 py-2 hover:bg-yellow-600 transition"
+            whileHover={{ scale: 1.1 }}
+            className="bg-white rounded-lg flex items-center gap-2 px-4 py-2 shadow"
           >
-            <img src={wp} alt="WhatsApp" className="w-5 h-5" />
-            <h2 className="text-white">Join Our WhatsApp</h2>
+            <img src={fire} alt="Active Members" className="w-6 h-6" />
+            <h1 className="text-gray-800 font-medium">1,000+ Active Members</h1>
           </motion.button>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            className="border-2 border-white rounded-lg flex items-center gap-2 px-5 py-2 hover:bg-white/10 transition"
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="px-2"
           >
-            <img src={mail} alt="Mail" className="w-5 h-5" />
-            <h2 className="text-white">Subscribe to Weekly Wrap</h2>
-          </motion.button>
+            <h1 className="text-orange-400 text-4xl sm:text-5xl font-bold font-serif my-4">
+              Connect with 1,000+ Tech
+            </h1>
+            <h1 className="text-yellow-400 text-4xl sm:text-5xl font-bold font-serif mb-6">
+              Professionals in Odisha
+            </h1>
+            <p className="font-sans text-sm sm:text-base text-white leading-relaxed">
+              Join a growing community of founders, developers, and innovators <br className="hidden sm:block" />
+              building Odisha's tech future.
+            </p>
+          </motion.div>
+
+          {/* Join Buttons */}
+          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mt-4">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              className="bg-yellow-500 rounded-lg flex items-center gap-2 px-5 py-2 hover:bg-yellow-600 transition"
+            >
+              <img src={wp} alt="WhatsApp" className="w-5 h-5" />
+              <h2 className="text-white">Join Our WhatsApp</h2>
+            </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              className="border-2 border-white rounded-lg flex items-center gap-2 px-5 py-2 hover:bg-white/10 transition"
+            >
+              <img src={mail} alt="Mail" className="w-5 h-5" />
+              <h2 className="text-white">Subscribe to Weekly Wrap</h2>
+            </motion.button>
+          </div>
         </div>
       </section>
 
