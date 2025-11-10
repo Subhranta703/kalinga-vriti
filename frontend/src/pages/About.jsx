@@ -11,7 +11,7 @@ import sipraImg from "../assets/sipra.jpg";
 import rakeshImg from "../assets/rakesh.jpeg";
 import suvajeetImg from "../assets/suvajeet.jpeg";
 import sahilImg from "../assets/sahil.jpeg";
-import khushbooImg from "../assets/Khusboo.jpg";
+import khushImg  from "../assets/KhushImg.jpg";
  import sharmilaImg from "../assets/Sharmila.jpeg";
 
 // ✅ Value icons (placeholders)
@@ -50,7 +50,7 @@ export default function About() {
     {
       name: "Khushboo Singh",
       role: "UI/UX Designer",
-      img: khushbooImg,
+      img: khushImg ,
     },
     {
       name: "Sharmila Das",
