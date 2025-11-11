@@ -256,9 +256,7 @@ export default function About() {
           <h2 className="text-3xl font-bold mb-4 text-[#78350F]">
             The People Behind Kalinga Vriti
           </h2>
-          <div className="flex justify-center mb-3">
-            <Infinity className="text-[#B45309]" size={28} />
-          </div>
+        
           <p className="text-gray-700 mb-12 border-b border-[#B45309] pb-4 inline-block">
             Meet the minds shaping Odisha's digital temple of innovation.
           </p>
@@ -302,6 +300,9 @@ export default function About() {
                 innovation movement with deep financial expertise.
               </p>
             </div>
+            {/* <div className="flex justify-center  mb-3">
+            <Infinity className="text-[#B45309]" size={28} />
+          </div> */}
           </div>
         </div>
       </section>
