@@ -2,7 +2,7 @@ import React from "react";
 import { Users, Star, Award, Infinity } from "lucide-react";
 import bgAbout from "../assets/bg_about.png";
 import storyImage from "../assets/our_story_about.png";
-import polyImg from "../assets/poly.jpg";
+import polyImg from "../assets/Poly.jpg";
 import bishnuImg from "../assets/bishnu.jpeg";
 
 // ✅ Team images
