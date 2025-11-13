@@ -267,7 +267,7 @@ export default function About() {
             {/* Poly Sarkar */}
             <div className="bg-white rounded-xl shadow-lg p-8 border hover:shadow-xl transition">
               <img
-                src={polyImg}
+                src={}
                 alt="Poly Sarkar"
                 className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-yellow-400"
               />
