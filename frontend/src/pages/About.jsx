@@ -11,13 +11,15 @@ import sipraImg from "../assets/sipra.jpg";
 import rakeshImg from "../assets/rakesh.jpeg";
 import suvajeetImg from "../assets/suvajeet.jpeg";
 import sahilImg from "../assets/sahil.jpeg";
-import khushImg  from "../assets/KhushImg.jpg";
+import khushImg from "../assets/khushImg.jpg";
+
  import sharmilaImg from "../assets/Sharmila.jpeg";
 
 // ✅ Value icons (placeholders)
 import authenticityIcon from "../assets/authenticity_about.png";
 import communityIcon from "../assets/community_about.png";
 import inclusivityIcon from "../assets/inclusity_about.png";
+
 import impactIcon from "../assets/impact_about.png";
 
 export default function About() {
