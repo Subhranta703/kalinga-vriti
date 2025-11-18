@@ -3,20 +3,19 @@ import jwt from 'jsonwebtoken';
 import axios from 'axios';
 import User from '../models/User.js';
 
+/* ---------------- GOOGLE LOGIN ---------------- */
 const googleLogin = async (req, res) => {
   const { code } = req.body;
   if (!code) return res.status(400).json({ message: 'Authorization code missing' });
 
   try {
-    // 🔥 Detect frontend based on environment
     const redirectURI =
       process.env.NODE_ENV === "production"
-        ? process.env.GOOGLE_REDIRECT_URI_PROD  // Render deployment
-        : process.env.GOOGLE_REDIRECT_URI_DEV;  // Localhost
+        ? process.env.GOOGLE_REDIRECT_URI_PROD
+        : process.env.GOOGLE_REDIRECT_URI_DEV;
 
     console.log("Using redirect URI:", redirectURI);
 
-    // 1️⃣ Exchange code for access token
     const tokenRes = await axios.post("https://oauth2.googleapis.com/token", {
       code,
       client_id: process.env.GOOGLE_CLIENT_ID,
@@ -27,7 +26,6 @@ const googleLogin = async (req, res) => {
 
     const accessToken = tokenRes.data.access_token;
 
-    // 2️⃣ Fetch Google user info
     const userRes = await axios.get("https://www.googleapis.com/oauth2/v3/userinfo", {
       headers: { Authorization: `Bearer ${accessToken}` },
     });
@@ -35,7 +33,6 @@ const googleLogin = async (req, res) => {
     const { email, name } = userRes.data;
     if (!email) return res.status(400).json({ message: "Invalid Google account" });
 
-    // 3️⃣ Find or create user
     let user = await User.findOne({ email });
 
     if (!user) {
@@ -45,7 +42,6 @@ const googleLogin = async (req, res) => {
       await user.save();
     }
 
-    // 4️⃣ Generate JWT
     const token = jwt.sign(
       { id: user._id, email: user.email },
       process.env.JWT_SECRET,
@@ -63,4 +59,60 @@ const googleLogin = async (req, res) => {
   }
 };
 
-export { googleLogin };
+
+/* ---------------- EMAIL/PASSWORD REGISTER ---------------- */
+const register = async (req, res) => {
+  const { name, email, password } = req.body;
+
+  if (!email || !password)
+    return res.status(400).json({ message: 'Email and password required' });
+
+  const existing = await User.findOne({ email });
+  if (existing)
+    return res.status(409).json({ message: 'Email already registered' });
+
+  const salt = await bcrypt.genSalt(10);
+  const hash = await bcrypt.hash(password, salt);
+
+  const user = await User.create({ name, email, password: hash });
+
+  const token = jwt.sign(
+    { id: user._id, email: user.email },
+    process.env.JWT_SECRET,
+    { expiresIn: '7d' }
+  );
+
+  res.status(201).json({
+    user: { id: user._id, email: user.email, name: user.name },
+    token
+  });
+};
+
+
+/* ---------------- EMAIL/PASSWORD LOGIN ---------------- */
+const login = async (req, res) => {
+  const { email, password } = req.body;
+
+  const user = await User.findOne({ email });
+  if (!user)
+    return res.status(401).json({ message: 'Invalid credentials' });
+
+  const isValid = await bcrypt.compare(password, user.password);
+  if (!isValid)
+    return res.status(401).json({ message: 'Invalid credentials' });
+
+  const token = jwt.sign(
+    { id: user._id, email: user.email },
+    process.env.JWT_SECRET,
+    { expiresIn: '7d' }
+  );
+
+  res.json({
+    user: { id: user._id, email: user.email, name: user.name },
+    token
+  });
+};
+
+
+/* ---------------- EXPORTS ---------------- */
+export { register, login, googleLogin };
