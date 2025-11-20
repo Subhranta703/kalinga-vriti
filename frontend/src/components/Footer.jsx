@@ -13,7 +13,7 @@ export default function Footer() {
             <img src={logo} alt="Kalinga Vritti" className="h-10" />
             <div>
               <h1 className="text-lg font-semibold text-yellow-400">
-                Kalinga Vritti
+                Kalinga Vriti
               </h1>
               <p className="text-xs text-gray-400">
                 Empowering Odisha’s Innovation
@@ -25,16 +25,16 @@ export default function Footer() {
             community building.
           </p>
           <div className="flex gap-4 text-gray-400 text-xl">
-            <a href="#" className="hover:text-yellow-400">
+            <a href="https://x.com/KalingaVriti" className="hover:text-yellow-400">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="#" className="hover:text-yellow-400">
+            <a href="https://www.linkedin.com/company/kalinga-vriti/?viewAsMember=true" className="hover:text-yellow-400">
               <i className="fab fa-linkedin"></i>
             </a>
-            <a href="#" className="hover:text-yellow-400">
+            <a href="https://www.instagram.com/kalingavriti/" className="hover:text-yellow-400">
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="#" className="hover:text-yellow-400">
+            <a href="https://www.facebook.com/share/1ZB5evkcdY/" className="hover:text-yellow-400">
               <i className="fab fa-facebook"></i>
             </a>
           </div>
@@ -90,7 +90,7 @@ export default function Footer() {
 
       {/* 🔸 Bottom Section */}
       <div className="text-center text-sm text-gray-500 mt-6">
-        © 2025 Kalinga Vritti. All rights reserved.
+        © 2025 Kalinga Vriti. All rights reserved.
       </div>
     </footer>
   );

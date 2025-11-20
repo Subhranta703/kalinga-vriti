@@ -8,10 +8,10 @@ import bishnuImg from "../assets/bishnu.jpeg";
 // ✅ Team images
 import subhrantaImg from "../assets/Subhranta.jpeg";
 import sipraImg from "../assets/sipra.jpg";
-import rakeshImg from "../assets/rakesh.jpeg";
+import rakeshImg from "../assets/Rakesh.jpeg";
 import suvajeetImg from "../assets/suvajeet.jpeg";
 import sahilImg from "../assets/sahil.jpeg";
-import khushImg  from "../assets/KhushImg.jpg";
+import khushImg  from "../assets/khushImg.jpg";
  import sharmilaImg from "../assets/Sharmila.jpeg";
 
 // ✅ Value icons (placeholders)

@@ -1,21 +1,24 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from "react";
 
 export default function useAuth() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    !!localStorage.getItem("kv_token")
+  );
 
   useEffect(() => {
     const checkToken = () => {
-      const token = localStorage.getItem('kv_token');
-      setIsAuthenticated(!!token && token !== 'undefined' && token !== 'null');
+      const token = localStorage.getItem("kv_token");
+      setIsAuthenticated(!!token);
     };
 
+    // 🔥 Listen for token changes (Google login, logout, manual login)
+    window.addEventListener("storage", checkToken);
+
+    // 🔥 Run once on mount
     checkToken();
 
-    // Listen for token changes across tabs or after login
-    window.addEventListener('storage', checkToken);
-
     return () => {
-      window.removeEventListener('storage', checkToken);
+      window.removeEventListener("storage", checkToken);
     };
   }, []);
 

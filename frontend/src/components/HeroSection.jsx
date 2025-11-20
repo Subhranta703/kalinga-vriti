@@ -25,10 +25,18 @@ const HeroSection = () => {
 
           {/* BUTTONS */}
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 sm:gap-6">
-            <button className="bg-yellow-500 font-semibold rounded-md px-4 py-3 flex items-center justify-center gap-3 hover:bg-yellow-400 transition w-full sm:w-auto">
-              <img src={community} className="h-5 sm:h-6" alt="community" />
-              <span className="text-sm sm:text-base">Join Our Community</span>
-            </button>
+           <a
+  href="https://www.linkedin.com/company/kalinga-vriti/?viewAsMember=true"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-full sm:w-auto"
+>
+  <button className="bg-yellow-500 font-semibold rounded-md px-4 py-3 flex items-center justify-center gap-3 hover:bg-yellow-400 transition w-full sm:w-auto">
+    <img src={community} className="h-5 sm:h-6" alt="community" />
+    <span className="text-sm sm:text-base">Join Our Community</span>
+  </button>
+</a>
+
 
             <button className="bg-amber-200 font-semibold rounded-md px-4 py-3 flex items-center justify-center gap-3 hover:bg-amber-300 transition w-full sm:w-auto">
               <img src={calender} className="h-5 sm:h-6" alt="calendar" />

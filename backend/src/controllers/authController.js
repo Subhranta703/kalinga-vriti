@@ -16,6 +16,7 @@ const googleLogin = async (req, res) => {
 
     console.log("Using redirect URI:", redirectURI);
 
+    // Step 1: Exchange code for access token
     const tokenRes = await axios.post("https://oauth2.googleapis.com/token", {
       code,
       client_id: process.env.GOOGLE_CLIENT_ID,
@@ -26,36 +27,54 @@ const googleLogin = async (req, res) => {
 
     const accessToken = tokenRes.data.access_token;
 
+    // Step 2: Fetch user's Google info
     const userRes = await axios.get("https://www.googleapis.com/oauth2/v3/userinfo", {
       headers: { Authorization: `Bearer ${accessToken}` },
     });
 
-    const { email, name } = userRes.data;
+    const { email, name, picture } = userRes.data;
     if (!email) return res.status(400).json({ message: "Invalid Google account" });
 
+    // Step 3: Find or create user in DB
     let user = await User.findOne({ email });
 
     if (!user) {
-      user = await User.create({ name, email, google: true });
-    } else if (!user.google) {
+      user = await User.create({
+        name,
+        email,
+        google: true,
+        avatar: picture,     // ⭐ Save Google avatar
+        role: "user"
+      });
+    } else {
+      // update avatar on future logins
       user.google = true;
+      user.avatar = picture;
       await user.save();
     }
 
+    // Step 4: Generate JWT token
     const token = jwt.sign(
-      { id: user._id, email: user.email },
+      { id: user._id, email: user.email, role: user.role },
       process.env.JWT_SECRET,
       { expiresIn: "7d" }
     );
 
-    res.json({
-      user: { id: user._id, name: user.name, email: user.email },
-      token,
+    // Step 5: Response
+    return res.json({
+      user: {
+        id: user._id,
+        name: user.name,
+        email: user.email,
+        avatar: user.avatar,   // ⭐ Return avatar
+        role: user.role
+      },
+      token
     });
 
   } catch (err) {
     console.error("Google login error:", err.response?.data || err.message);
-    res.status(500).json({ message: "Google login failed" });
+    return res.status(500).json({ message: "Google login failed" });
   }
 };
 
@@ -74,16 +93,22 @@ const register = async (req, res) => {
   const salt = await bcrypt.genSalt(10);
   const hash = await bcrypt.hash(password, salt);
 
-  const user = await User.create({ name, email, password: hash });
+  const user = await User.create({
+    name,
+    email,
+    password: hash,
+    avatar: "",          // still needed for UI
+    role: "user"
+  });
 
   const token = jwt.sign(
-    { id: user._id, email: user.email },
+    { id: user._id, email: user.email, role: user.role },
     process.env.JWT_SECRET,
     { expiresIn: '7d' }
   );
 
   res.status(201).json({
-    user: { id: user._id, email: user.email, name: user.name },
+    user: { id: user._id, email: user.email, name: user.name, avatar: user.avatar, role: user.role },
     token
   });
 };
@@ -102,13 +127,19 @@ const login = async (req, res) => {
     return res.status(401).json({ message: 'Invalid credentials' });
 
   const token = jwt.sign(
-    { id: user._id, email: user.email },
+    { id: user._id, email: user.email, role: user.role },
     process.env.JWT_SECRET,
     { expiresIn: '7d' }
   );
 
   res.json({
-    user: { id: user._id, email: user.email, name: user.name },
+    user: {
+      id: user._id,
+      email: user.email,
+      name: user.name,
+      avatar: user.avatar,
+      role: user.role
+    },
     token
   });
 };
