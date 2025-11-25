@@ -1,4 +1,5 @@
 // src/pages/Founder.jsx
+import { Link } from "react-router-dom";
 
 import { motion } from "framer-motion";
 import React, { useState } from "react";
@@ -198,7 +199,7 @@ export default function Founder() {
     <div className="w-16 h-[2px] bg-[#E56708] mx-auto rounded mt-3 mb-6" />
 
     <p className="max-w-4xl mx-auto text-gray-700 text-base md:text-lg leading-relaxed">
-      <strong className="text-[#B45309]">Synergy Voices</strong> helps founders, students, and professors share authentic stories, build influential brands, and connect with opportunities.
+      <strong className="text-[#B45309]">Synergy Voices</strong> helps founders, students, womens, startups/MSME and professors share authentic stories, build influential brands, and connect with opportunities.
     </p>
 
     {/* Feature grid with animations */}
@@ -860,17 +861,33 @@ export default function Founder() {
               <div className="text-gray-300 mb-6">
                 Join 100+ ecosystem builders telling their stories.
               </div>
-              <div className="flex flex-wrap items-center justify-center gap-4">
-                <button className="px-6 py-3 bg-[#E56708] rounded-full shadow hover:bg-[#d65500] transition flex items-center gap-2">
-                  Share Your Story
-                </button>
-                <button className="px-6 py-3 bg-transparent rounded-full border border-[#F4C430] text-[#F4C430] hover:bg-[#F4C430] hover:text-white transition">
-                  Join Community
-                </button>
-                <button className="px-6 py-3 bg-transparent rounded-full border border-[#F4C430] text-[#F4C430] hover:bg-[#F4C430] hover:text-white transition">
-                  Attend Event
-                </button>
-              </div>
+              
+
+<div className="flex flex-wrap items-center justify-center gap-4">
+
+  <Link 
+    to="/contact"
+    className="px-6 py-3 bg-[#E56708] rounded-full shadow hover:bg-[#d65500] transition flex items-center gap-2"
+  >
+    Share Your Story
+  </Link>
+
+  <Link
+    to="/community"
+    className="px-6 py-3 bg-transparent rounded-full border border-[#F4C430] text-[#F4C430] hover:bg-[#F4C430] hover:text-white transition"
+  >
+    Join Community
+  </Link>
+
+  <Link
+    to="/events"
+    className="px-6 py-3 bg-transparent rounded-full border border-[#F4C430] text-[#F4C430] hover:bg-[#F4C430] hover:text-white transition"
+  >
+    Attend Event
+  </Link>
+
+</div>
+
             </div>
           </div>
         </section>

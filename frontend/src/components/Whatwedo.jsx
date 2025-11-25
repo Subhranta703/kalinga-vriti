@@ -27,7 +27,7 @@ const Whatwedo = () => {
     },
     {
       img: bulb,
-      title: "Founders Way",
+      title: "Synergy Voices",
       description:
         "A journey from idea to impact – where innovators, dreamers, and doers find their path to build the next big thing.",
     },
@@ -42,17 +42,22 @@ const Whatwedo = () => {
   return (
     <section className="relative text-center py-16 px-6 sm:px-10 overflow-hidden">
       {/* 🌸 Floating background image */}
-      <motion.img
+      {/* <motion.img
         src={sidechakra}
         alt="Decor"
-        className="absolute right-0 top-10 w-40 md:w-56 opacity-50"
+        className="absolute right-0 top-10 w-40 md:w-56 md:top-3 opacity-50"
         animate={{ rotate: [0, 10, -10, 0] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-      />
+      /> */}
  < img
     src={downchakra}
     alt="down Chakra"
-    className="absolute top-0 right-0 w-36 h-36 md:w-72 md:h-72  z-0  "
+    className="  absolute top-0 right-0 
+    w-24 h-24     
+    sm:w-20 sm:h-20 
+    md:w-40 md:h-40  
+    lg:w-56 lg:h-56 
+    z-0 "
     />
       {/* Title */}
       <motion.h1

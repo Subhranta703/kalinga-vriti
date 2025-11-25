@@ -80,7 +80,7 @@ export default function UpcomingEvents() {
               viewport={{ once: true }}
               className="mt-6 space-y-4 w-full sm:w-[90%] md:w-[85%] lg:ml-10"
             >
-              <div className="flex justify-between items-center bg-gray-50 p-4 rounded-xl shadow-sm hover:shadow-md transition cursor-pointer hover:scale-[1.02]">
+              <div className="flex justify-between items-center bg-gray-50 p-4 rounded-xl border border-black p-6 shadow-sm hover:shadow-md transition cursor-pointer hover:scale-[1.02]">
                 <div>
                   <h4 className="font-semibold text-gray-800 text-sm sm:text-base">
                     Tech Talk: Cloud Native Applications
@@ -92,7 +92,7 @@ export default function UpcomingEvents() {
                 <span className="text-orange-500 text-lg">→</span>
               </div>
 
-              <div className="flex justify-between items-center bg-gray-50 p-4 rounded-xl shadow-sm hover:shadow-md transition cursor-pointer hover:scale-[1.02]">
+              <div className="flex justify-between items-center bg-gray-50 p-4 rounded-xl  border border-black p-6 shadow-sm hover:shadow-md transition cursor-pointer hover:scale-[1.02]">
                 <div>
                   <h4 className="font-semibold text-gray-800 text-sm sm:text-base">
                     Workshop: React & Next.js

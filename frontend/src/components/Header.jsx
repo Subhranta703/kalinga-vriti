@@ -69,8 +69,9 @@ export default function Header() {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Events", path: "/events" },
+    
     { name: "About Us", path: "/about" },
+    { name: "Events", path: "/events" },
     { name: "Synergy Voices", path: "/synergyvoice" },
   ];
 
@@ -138,39 +139,7 @@ export default function Header() {
 
 
 
-        {/* DESKTOP SEARCH */}
-        <form
-          onSubmit={handleSearchSubmit}
-          className="relative hidden lg:flex items-center border border-yellow-500 rounded-md px-3 py-1.5 ml-8 w-64 focus-within:ring-2 focus-within:ring-yellow-400 transition bg-white"
-        >
-          <img src={searchIcon} className="h-4 w-4 mr-2 opacity-70" />
-          <input
-            type="text"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Search stories..."
-            className="w-full text-sm outline-none bg-transparent"
-          />
-
-          {/* Auto-suggestion dropdown */}
-          {suggestions.length > 0 && (
-            <ul className="absolute top-full mt-1 left-0 bg-white border border-gray-200 shadow-md rounded-md w-full z-50">
-              {suggestions.map((s) => (
-                <li
-                  key={s.id}
-                  className="px-3 py-2 text-sm hover:bg-yellow-50 cursor-pointer text-gray-700"
-                  onClick={() => {
-                    navigate(s.path);
-                    setSuggestions([]);
-                    setSearchTerm("");
-                  }}
-                >
-                  {s.title}
-                </li>
-              ))}
-            </ul>
-          )}
-        </form>
+        
 
         {/* NAVIGATION */}
         <nav className="hidden md:flex items-center gap-6 text-sm ml-auto">
