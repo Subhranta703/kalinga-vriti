@@ -1,11 +1,20 @@
+// import { Navigate } from 'react-router-dom';
 
-import { useContext } from "react";
-import { Navigate } from "react-router-dom";
-import { AuthContext } from "../context/AuthContext";
+// import useAuth from '../hooks/useAuth';
 
-export default function ProtectedRoute({ children }) {
-  const { user } = useContext(AuthContext);
+// export default function ProtectedRoute({ children }) {
+//   const token=localStorage.getItem("kv_token")
+//   // console.log(token)
+//   const isAuthenticated =token?true:false;
+//   return isAuthenticated ? children : <Navigate to="/login" replace />;
+// }
 
-  if (!user) return <Navigate to="/login" replace />;
-  return children;
+import React from 'react'
+
+export const ProtectedRoutes = () => {
+  return (
+    <div>ProtectedRoutes</div>
+  )
 }
+
+ 

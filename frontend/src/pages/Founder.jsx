@@ -131,7 +131,7 @@ export default function Founder() {
           most remain invisible.
         </motion.p>
 
-        {/* Emphasized FOUNDERS WAY line */}
+        {/* Emphasized Synergy Voices line */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -150,7 +150,7 @@ export default function Founder() {
             }}
             className="text-white text-xl md:text-2xl inline-block"
           >
-            FOUNDERS WAY
+            Synergy Voices
           </motion.strong>{" "}
           amplifies your story, builds your brand, and opens doors to investors,
           customers, and opportunities.
@@ -198,7 +198,7 @@ export default function Founder() {
     <div className="w-16 h-[2px] bg-[#E56708] mx-auto rounded mt-3 mb-6" />
 
     <p className="max-w-4xl mx-auto text-gray-700 text-base md:text-lg leading-relaxed">
-      <strong className="text-[#B45309]">FOUNDERS WAY</strong> helps founders, students, and professors share authentic stories, build influential brands, and connect with opportunities.
+      <strong className="text-[#B45309]">Synergy Voices</strong> helps founders, students, and professors share authentic stories, build influential brands, and connect with opportunities.
     </p>
 
     {/* Feature grid with animations */}

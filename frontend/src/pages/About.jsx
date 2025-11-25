@@ -2,7 +2,7 @@ import React from "react";
 import { Users, Star, Award, Infinity } from "lucide-react";
 import bgAbout from "../assets/bg_about.png";
 import storyImage from "../assets/our_story_about.png";
-import polyImg from "../assets/poly.jpg";
+import poly from "../assets/poly.png";
 import bishnuImg from "../assets/bishnu.jpeg";
 
 // ✅ Team images
@@ -11,8 +11,8 @@ import sipraImg from "../assets/sipra.jpg";
 import rakeshImg from "../assets/Rakesh.jpeg";
 import suvajeetImg from "../assets/suvajeet.jpeg";
 import sahilImg from "../assets/sahil.jpeg";
-import khushImg  from "../assets/khushImg.jpg";
- import sharmilaImg from "../assets/Sharmila.jpeg";
+import khushImg from "../assets/khushImg.jpg";
+import sharmilaImg from "../assets/Sharmila.jpeg";
 
 // ✅ Value icons (placeholders)
 import authenticityIcon from "../assets/authenticity_about.png";
@@ -50,7 +50,7 @@ export default function About() {
     {
       name: "Khushboo Singh",
       role: "UI/UX Designer",
-      img: khushImg ,
+      img: khushImg,
     },
     {
       name: "Sharmila Das",
@@ -63,44 +63,44 @@ export default function About() {
     <div className="text-gray-800">
       {/* HERO SECTION */}
       <section
-  className="relative bg-cover bg-center bg-no-repeat flex items-center"
-  style={{
-    backgroundImage: `url(${bgAbout})`,
-    minHeight: "80vh",
-  }}
->
-  {/* Overlay for subtle contrast (optional but enhances readability) */}
-  <div className="absolute inset-0 bg-gradient-to-r from-white/40 via-white/20 to-transparent"></div>
+        className="relative bg-cover bg-center bg-no-repeat flex items-center"
+        style={{
+          backgroundImage: `url(${bgAbout})`,
+          minHeight: "80vh",
+        }}
+      >
+        {/* Overlay for subtle contrast (optional but enhances readability) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/40 via-white/20 to-transparent"></div>
 
-  {/* Hero Content */}
-  <div className="relative container mx-auto px-6 md:px-12 lg:px-20 flex flex-col justify-center text-left">
-    <div className="max-w-2xl">
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#78350F] leading-tight mb-4">
-        The Vision Behind <br />
-        <span className="text-[#B45309]">Kalinga Vriti</span>
-      </h1>
+        {/* Hero Content */}
+        <div className="relative container mx-auto px-6 md:px-12 lg:px-20 flex flex-col justify-center text-left">
+          <div className="max-w-2xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#78350F] leading-tight mb-4">
+              The Vision Behind <br />
+              <span className="text-[#B45309]">Kalinga Vriti</span>
+            </h1>
 
-      <p className="text-gray-900 text-lg md:text-xl font-medium mb-8">
-        A digital temple where Odisha’s innovation, stories, and community thrive.
-      </p>
+            <p className="text-gray-900 text-lg md:text-xl font-medium mb-8">
+              A digital temple where Odisha’s innovation, stories, and community thrive.
+            </p>
 
-      <div className="flex flex-wrap gap-4">
-        <a
-          href="#team"
-          className="bg-[#F4C430] hover:bg-[#FCB900] text-white px-6 py-3 rounded-full shadow-md font-medium transition-transform transform hover:-translate-y-0.5"
-        >
-          Meet the Team
-        </a>
-        <a
-          href="#mission"
-          className="border-2 border-[#F4C430] text-[#78350F] px-6 py-3 rounded-full font-medium hover:bg-[#F4C430] hover:text-white transition-transform transform hover:-translate-y-0.5"
-        >
-          Our Mission
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="#team"
+                className="bg-[#F4C430] hover:bg-[#FCB900] text-white px-6 py-3 rounded-full shadow-md font-medium transition-transform transform hover:-translate-y-0.5"
+              >
+                Meet the Team
+              </a>
+              <a
+                href="#mission"
+                className="border-2 border-[#F4C430] text-[#78350F] px-6 py-3 rounded-full font-medium hover:bg-[#F4C430] hover:text-white transition-transform transform hover:-translate-y-0.5"
+              >
+                Our Mission
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
       {/* STORY SECTION */}
@@ -199,8 +199,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* WHAT MAKES US DIFFERENT */}
-      <section className="py-20 bg-gradient-to-b from-[#FFFBEA] to-[#FFF5D1] text-center">
+    {/* //  WHAT MAKES US DIFFERENT */}
+      {/* <section className="py-20 bg-gradient-to-b from-[#FFFBEA] to-[#FFF5D1] text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#78350F] mb-10">
             What Makes Us Different
@@ -241,7 +241,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FOUNDERS SECTION */}
       <section
@@ -256,7 +256,7 @@ export default function About() {
           <h2 className="text-3xl font-bold mb-4 text-[#78350F]">
             The People Behind Kalinga Vriti
           </h2>
-        
+
           <p className="text-gray-700 mb-12 border-b border-[#B45309] pb-4 inline-block">
             Meet the minds shaping Odisha's digital temple of innovation.
           </p>
@@ -265,7 +265,7 @@ export default function About() {
             {/* Poly Sarkar */}
             <div className="bg-white rounded-xl shadow-lg p-8 border hover:shadow-xl transition">
               <img
-                src={polyImg}
+                src={poly}
                 alt="Poly Sarkar"
                 className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-yellow-400"
               />
@@ -308,7 +308,7 @@ export default function About() {
       </section>
 
       {/* OUR TEAM SECTION */}
-{/* OUR TEAM SECTION */} <section className="py-20 text-center" style={{ background: "linear-gradient(180deg, #FFF9E5 0%, #FDE68A 50%, #F4C430 100%)", }} > <div className="container mx-auto px-4"> <h2 className="text-3xl font-bold text-[#78350F] mb-10"> Our Team </h2> {/* First row (3 people) */} <div className="grid md:grid-cols-3 gap-10 justify-center mb-10"> {teamMembers.slice(0, 3).map((member, i) => ( <div key={i} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 duration-300 p-6 border border-yellow-100" > <div className="flex flex-col items-center"> <img src={member.img} alt={member.name} className="w-24 h-24 rounded-full object-cover mb-4 shadow-md border-4 border-yellow-300" /> <h4 className="font-semibold text-lg text-[#78350F] mb-1"> {member.name} </h4> <p className="text-sm text-gray-600 mb-2">{member.role}</p> <p className="text-xs text-gray-500 mb-4"> Connecting innovators across Odisha. </p> </div> </div> ))} </div> {/* Second row (4 people) */} <div className="grid md:grid-cols-4 gap-10 justify-center"> {teamMembers.slice(3).map((member, i) => ( <div key={i} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 duration-300 p-6 border border-yellow-100" > <div className="flex flex-col items-center"> <img src={member.img} alt={member.name} className="w-24 h-24 rounded-full object-cover mb-4 shadow-md border-4 border-yellow-300" /> <h4 className="font-semibold text-lg text-[#78350F] mb-1"> {member.name} </h4> <p className="text-sm text-gray-600 mb-2">{member.role}</p> <p className="text-xs text-gray-500 mb-4"> Connecting innovators across Odisha. </p> </div> </div> ))} </div> <div className="mt-12"> <a href="#" className="bg-[#F4C430] hover:bg-[#FCB900] text-white px-6 py-3 rounded-full shadow font-medium transition" > Meet the Whole Team → </a> <p className="text-sm text-[#78350F] mt-2 italic"> We're growing fast — join the movement. </p> </div> </div> </section>
+      {/* OUR TEAM SECTION */} <section className="py-20 text-center" style={{ background: "linear-gradient(180deg, #FFF9E5 0%, #FDE68A 50%, #F4C430 100%)", }} > <div className="container mx-auto px-4"> <h2 className="text-3xl font-bold text-[#78350F] mb-10"> Our Team </h2> {/* First row (3 people) */} <div className="grid md:grid-cols-3 gap-10 justify-center mb-10"> {teamMembers.slice(0, 3).map((member, i) => (<div key={i} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 duration-300 p-6 border border-yellow-100" > <div className="flex flex-col items-center"> <img src={member.img} alt={member.name} className="w-24 h-24 rounded-full object-cover mb-4 shadow-md border-4 border-yellow-300" /> <h4 className="font-semibold text-lg text-[#78350F] mb-1"> {member.name} </h4> <p className="text-sm text-gray-600 mb-2">{member.role}</p> <p className="text-xs text-gray-500 mb-4"> Connecting innovators across Odisha. </p> </div> </div>))} </div> {/* Second row (4 people) */} <div className="grid md:grid-cols-4 gap-10 justify-center"> {teamMembers.slice(3).map((member, i) => (<div key={i} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 duration-300 p-6 border border-yellow-100" > <div className="flex flex-col items-center"> <img src={member.img} alt={member.name} className="w-24 h-24 rounded-full object-cover mb-4 shadow-md border-4 border-yellow-300" /> <h4 className="font-semibold text-lg text-[#78350F] mb-1"> {member.name} </h4> <p className="text-sm text-gray-600 mb-2">{member.role}</p> <p className="text-xs text-gray-500 mb-4"> Connecting innovators across Odisha. </p> </div> </div>))} </div> <div className="mt-12"> <a href="#" className="bg-[#f49e0b] hover:bg-[#e37c1c] text-white px-6 py-3 rounded-full shadow font-medium transition" > Meet the Whole Team → </a> <p className="text-sm text-[#78350F] mt-2 italic"> We're growing fast — join the movement. </p> </div> </div> </section>
 
 
 

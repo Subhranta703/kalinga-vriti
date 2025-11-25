@@ -1,15 +1,39 @@
 import mongoose from "mongoose";
 
-const UserSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  email: { type: String, required: true, unique: true },
+const userSchema = new mongoose.Schema(
+  {
+    name: { type: String, trim: true },
 
-  password: { type: String },
-  google: { type: Boolean, default: false },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      lowercase: true,
+    },
 
-  avatar: { type: String, default: "" },         // ⭐ Google avatar
-  role: { type: String, default: "user" },       // ⭐ "user" | "admin"
+    password: {
+      type: String,
+      required: function () {
+        return !this.google; // only require password if not Google login
+      },
+    },
 
-}, { timestamps: true });
+    google: {
+      type: Boolean,
+      default: false,
+    },
 
-export default mongoose.model("User", UserSchema);
+    role: {
+      type: String,
+      enum: ["admin", "member"],
+      default: "member",
+    },
+
+    createdAt: { type: Date, default: Date.now },
+  },
+  { timestamps: true }
+);
+
+const User = mongoose.model("User", userSchema);
+
+export default User;    // ← VERY IMPORTANT

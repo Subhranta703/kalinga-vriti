@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Calendar, MapPin, Users, Award, Clock } from "lucide-react";
 import { motion } from "framer-motion";
-import star from "../assets/star.png";
+import star from "../assets/Star.png";
 import event1 from "../assets/event1.png";
 import event2 from "../assets/event2.png";
 import event3 from "../assets/event3.png";

@@ -27,17 +27,32 @@ import authRoutes from "./src/routes/auth.routes.js";
 dotenv.config();
  
 const app = express();
-app.use(json())
-// Middlewares
-app.use(express.json());
+ 
+
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173", "https://kvclient.vercel.app"],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
 
+// Important: allow preflight
+app.options("*", cors());
+// Middlewares
+app.use(express.json());
+// app.use(
+//   cors({
+// origin: ["http://localhost:5173", "https://kvclient.vercel.app"],
+//    credentials: true,
+//   })
+// );
+
 // Test route
+
+ 
+
 app.get("/", (req, res) => {
   res.send("Server running...");
 });

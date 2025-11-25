@@ -4,6 +4,7 @@ import EventCard from '../components/EventCard';
  import Whatwedo from '../components/Whatwedo';
  import FeaturedContent from '../components/FeaturedContent';
  import UpcomingEvents from '../components/UpcomingEvents';
+ import Whatmakesusdifferent from '../components/Whatmakesusdifferent';
  export default function Home() {
   // Placeholder sample data; fetch from API for real data later
   const events = [{
@@ -33,7 +34,8 @@ import EventCard from '../components/EventCard';
 
      {/* what we do */}
    <Whatwedo/>
-
+{/* whatmakes us different */}
+<Whatmakesusdifferent/>
      {/* Featured content */}
      <FeaturedContent/>
 

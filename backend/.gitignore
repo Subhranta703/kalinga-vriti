@@ -1,8 +1,34 @@
+<<<<<<< HEAD
 .env
 docker
 node_modules
+=======
+# Logs
+>>>>>>> 77ced52b4148019a7669453404b989b2130a1730
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
+<<<<<<< HEAD
 yarn-error.log*
+=======
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+>>>>>>> 77ced52b4148019a7669453404b989b2130a1730
