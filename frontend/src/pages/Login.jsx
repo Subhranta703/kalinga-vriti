@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import  api  from "../api/api";
 import { useNavigate, Link } from "react-router-dom";
 import { FaGoogle, FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
-import login from "../assets/Login.png";
+import loginjp from "../assets/Login.png";
 import { useGoogleLogin } from '@react-oauth/google';
 
 export default function Login() {
@@ -58,7 +58,7 @@ const googleLogin = useGoogleLogin({
 
   {/* Illustration */}
   <img
-    src={login}
+    src={loginjp}
     alt="Login Illustration"
     className="w-4/5 max-w-sm rounded-xl shadow-[0_10px_25px_rgba(255,87,34,0.3)] hover:scale-[1.02] transition-transform duration-300"
   />
