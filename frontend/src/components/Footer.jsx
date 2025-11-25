@@ -74,7 +74,7 @@ export default function Footer() {
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-2">
               <Mail size={16} className="text-yellow-400" /> 
-              info@odishatech.in
+              info@kalingavriti.in
             </li>
             {/* <li className="flex items-center gap-2">
               <Phone size={16} className="text-yellow-400" /> 
@@ -82,7 +82,7 @@ export default function Footer() {
             </li> */}
             <li className="flex items-center gap-2">
               <MapPin size={16} className="text-yellow-400" /> 
-              O-Hub, Bhubaneswar
+              O-Hub, Bhubaneswar , Odisha
             </li>
           </ul>
           <button className="mt-4 bg-yellow-400 text-black font-medium text-sm px-4 py-2 rounded-md hover:bg-yellow-300 transition">

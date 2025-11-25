@@ -93,16 +93,19 @@ export default function ContactUs() {
             Be part of the journey. Follow us for insights, news, and progress.
           </p>
 
-          <div className="flex gap-4 text-xl">
-            {[linkedin, twitter, facebook, instagram].map((icon, i) => (
-              <motion.img
-                key={i}
-                src={icon}
-                className="h-6 w-6 cursor-pointer"
-                whileHover={{ scale: 1.2 }}
-                transition={{ type: "spring", stiffness: 200 }}
-              />
-            ))}
+          <div className="flex gap-4 text-gray-200 text-xl">
+            <a href="https://x.com/KalingaVriti" className="hover:text-yellow-400">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/kalinga-vriti/posts/?feedView=all" className="hover:text-yellow-400">
+              <i className="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/kalingavriti/" className="hover:text-yellow-400">
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61583185265887#" className="hover:text-yellow-400">
+              <i className="fab fa-facebook"></i>
+            </a>
           </div>
         </motion.div>
 
